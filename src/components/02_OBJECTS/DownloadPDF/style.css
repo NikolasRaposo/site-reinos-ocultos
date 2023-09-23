@@ -1,0 +1,9 @@
+.btn-redRO {
+  background-color: var(--redRO);
+  color: var(--whiteRO);
+}
+
+.btn-redRO:hover {
+  background-color: var(--lightRedRO);
+  color: var(--whiteRO);
+}

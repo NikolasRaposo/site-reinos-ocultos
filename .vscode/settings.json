@@ -1,0 +1,6 @@
+{
+  "html.format.maxPreserveNewLines": null,
+  "html.format.preserveNewLines": true,
+  "diffEditor.wordWrap": "on",
+  "editor.wordWrap": "on"
+}

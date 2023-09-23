@@ -1,0 +1,26 @@
+.container {
+    background-image: url('/src/assets/img/Banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--whiteRO);
+}
+
+.container h1 {
+    border: 3px solid var(--whiteRO);
+    display: flex;
+    margin-bottom: .5em;
+    justify-content: center;
+    font-family: GothamMedium;
+    background-color: var(--blackRO);
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5vw;
+    color: var(--blackRO);
+}

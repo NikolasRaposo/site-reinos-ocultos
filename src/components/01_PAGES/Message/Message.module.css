@@ -1,0 +1,20 @@
+.message {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid var(--redRO);
+    text-align: center;
+    margin-bottom: 2em;
+    border-radius: 5px;
+}
+
+.success {
+    color: var(--whiteRO);
+    background-color: var(--lightRedRO);
+    border: var(--blackRO);
+}
+
+.error {
+    color: var(--whiteRO);
+    background-color: var(--redRO);
+    border: var(--blackRO);
+}

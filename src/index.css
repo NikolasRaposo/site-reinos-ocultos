@@ -1,0 +1,56 @@
+:root {
+  --whiteRO: #EFEFF0;
+  --blackRO: #0C0C0C;
+  --redRO: #C60026;
+  --lightRedRO: #ff0026;
+}
+
+  @font-face {
+  font-family: "GothamBlack";
+  src: local("GothamBlack"),
+    url(./assets/fonts/Gotham/GothamBlack.otf) format("opentype");
+    }
+  @font-face {
+    font-family: "GothamBoldItalic";
+  src: local("GothamBoldItalic"),
+    url(./assets/fonts/Gotham/GothamBoldItalic.ttf) format("truetype");
+    }
+  @font-face {
+    font-family: "GothamBook";
+  src: local("GothamBook"),
+    url(./assets/fonts/Gotham/GothamBook.ttf) format("truetype");
+    }
+  @font-face {
+    font-family: "GothamExLight";
+  src: local("GothamExLight"),
+    url(./assets/fonts/Gotham/GothamExLight.otf) format("opentype");
+    }
+  @font-face {
+    font-family: "GothamLight";
+  src: local("GothamLight"),
+    url(./assets/fonts/Gotham/GothamLight.otf) format("opentype");
+    }
+  @font-face {
+    font-family: "GothamLightItalic";
+  src: local("GothamLightItalic"),
+    url(./assets/fonts/Gotham/GothamLightItalic.ttf) format("truetype");
+    }
+  @font-face {
+    font-family: "GothamMedium";
+  src: local("GothamMedium"),
+    url(./assets/fonts/Gotham/GothamMedium.ttf) format("truetype");
+    }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: GothamBook;
+}
+
+html,
+body,
+#root {
+  background-color: var(--blackRO);
+  height: 100%;
+}
