@@ -1,8 +1,29 @@
 :root {
   --whiteRO: #EFEFF0;
   --blackRO: #0C0C0C;
+  --grayRO: #404040;
   --redRO: #C60026;
-  --lightRedRO: #ff0026;
+  --lightRedRO: #F00026;
+}
+
+.btn-redRO {
+  background-color: var(--redRO);
+  color: var(--whiteRO);
+}
+
+.btn-redRO:hover {
+  background-color: var(--lightRedRO);
+  color: var(--whiteRO);
+}
+
+.navbar-whiteRO {
+  background-color: var(--whiteRO);
+  color: var(--blackRO);
+}
+
+.nav-link-whiteRO {
+  background-color: var(--whiteRO);
+  color: var(--blackRO);
 }
 
   @font-face {

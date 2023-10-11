@@ -1,14 +1,16 @@
+/*TODO Gotham medium*/
 .btn {
     background-color: var(--redRO);
     color: var(--whiteRO);
-    padding: 0.5em 1em;
-    width:fit-content;
+    padding: 0.4em 1em;
+    width: fit-content;
     text-decoration: none;
     transition: 0.5s;
     border-radius: 100px;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 .btn:hover {
     background-color: var(--lightRedRO);
+    color: var(--whiteRO);
 }

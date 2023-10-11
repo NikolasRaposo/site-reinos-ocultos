@@ -1,12 +1,15 @@
-import "./style.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../../assets/img/logo_ro.png";
+import NavLink from "../../02_OBJECTS/NavLinkRO/index";
+import LinkButton from "../../02_OBJECTS/LinkButton/index";
+import Style from "./style.module.css"
 
 export default function index() {
   return (
-    <Navbar expand="lg">
+    <Navbar expand="lg" variant="whiteRO">
+  
       <Container fluid>
         <Navbar.Brand href="/">
           <img
@@ -17,25 +20,15 @@ export default function index() {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="justify-content-end fw-bold fs-4 me-4">
-          <Nav>
+        <Navbar.Collapse className="justify-content-end fw-bold me-4">
+          <Nav className={Style.navlinkconfig}>
+            <NavLink href="/" text="INICIO"/>
+            <NavLink href="/blog" text="BLOG"/>
+            <NavLink href="/campanhas" text="CAMPANHAS"/>
+            <NavLink href="/loja" text="AVENTURAS"/>
+            <NavLink href="/contato" text="CONTATO"/>
             <Nav.Link href="/">
-              INICIO
-            </Nav.Link>
-            <Nav.Link href="/blog">
-              BLOG
-            </Nav.Link>
-            <Nav.Link href="/campanhas">
-              CAMPANHAS
-            </Nav.Link>
-            <Nav.Link href="/sobre">
-              SOBRE
-            </Nav.Link>
-            <Nav.Link href="/contato">
-              CONTATO
-            </Nav.Link>
-            <Nav.Link href="/loja">
-              LOJA
+              <LinkButton styleConfig={{ fontSize: '.7em' }} to="/sobre" text="LIVE NA TWITCH" />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

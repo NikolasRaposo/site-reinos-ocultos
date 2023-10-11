@@ -18,6 +18,10 @@
     word-spacing: 5px;
 }
 
+.row h1 {
+    color: var(--redRO);
+}
+
 .prancheta {
     position: absolute;
     top: 50%;

@@ -1,6 +1,5 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import "./style.css";
 
 export default function Index({ Img, PDF, Nome }) {
   return (
