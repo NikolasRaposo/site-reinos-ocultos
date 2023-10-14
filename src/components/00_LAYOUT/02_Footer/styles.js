@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Footer = styled.div`
   border: ${(props) => `${props.borda}px`} solid red;
   color: ${(props) => `var(--${props.cor})`};
+  background-color:  ${(props) => `var(--${props.fundoCor})`};
+  position: relative;
 `;
 
 export const Seção = styled.section`
   border: ${(props) => `${props.borda}px`} solid red;
-  display: flex;
+  background-color:  ${(props) => `var(--${props.fundoCor})`};
+  position: ${(props) => `${props.position}`};
+  display: ${(props) => `${props.display}`};
+  overflow: ${(props) => `${props.conteudoOcultado}`};
   flex-direction: ${(props) => `${props.direcaoConteudo}`};
   flex-wrap: ${(props) => `${props.quebraLinha}`};
   column-gap: ${(props) => `${props.distanciaEntre}em`};
@@ -24,10 +29,12 @@ export const Seção = styled.section`
 export const Divisão = styled.div`
   border: ${(props) => `${props.borda}px`} solid red;
   display: ${(props) => `${props.disposicao}`};
+  overflow: ${(props) => `${props.conteudoOcultado}`};
   flex-wrap: ${(props) => `${props.quebraLinha}`};
   flex-direction: ${(props) => `${props.direcaoConteudo}`};
   justify-content: ${(props) => `${props.justificarConteudo}`};
   align-items: ${(props) => `${props.alinharConteudo}`};
+  column-gap: ${(props) => `${props.distanciaEntre}em`};
   width: ${(props) => `${props.tamanhoTotal}em`};
   margin-top: ${(props) => `${props.margemTopo}em`};
   margin-bottom: ${(props) => `${props.margemBase}em`};
@@ -35,6 +42,15 @@ export const Divisão = styled.div`
   margin-right: ${(props) => `${props.margemDireita}em`};
   margin: ${(props) => `${props.margemVertical}em`}
     ${(props) => `${props.margemHorizontal}em`};
+
+  svg {
+    font-size: ${(props) => `${props.iconSize}em`};
+    cursor: pointer;
+  }
+
+  svg:hover {
+    color: var(--redRO);
+  }
 `;
 
 export const Titulo = styled.h1`
@@ -46,19 +62,25 @@ export const Titulo = styled.h1`
   font-size: ${(props) => `${props.fontSize}em`};
   padding-right: ${(props) => `${props.limiteTexto}em`};
   text-align: ${(props) => `${props.alinhamento}`};
+  line-height: ${(props) => `${props.alturaLinha}em`};
 `;
 
 export const Paragrafo = styled.p`
   border: ${(props) => `${props.borda}px`} solid red;
+  font-family: GothamMedium;
+  color: ${(props) => `var(--${props.cor})`};
   width: ${(props) => `${props.tamanhoTotal}%`};
-  font-size: ${(props) => `${props.fontSize}rem`};
+  font-size: ${(props) => `${props.fontSize}em`};
   margin-top: ${(props) => `${props.margemTopo}em`};
   word-spacing: ${(props) => `${props.espacamento}px`};
   text-align: ${(props) => `${props.alinhamento}`};
+  line-height: ${(props) => `${props.alturaLinha}em`};
 `;
 
-export const Perfil = styled.img`
-  border-radius: 100%;
-  width: 20%;
-  display: ;
+export const IconeFundo = styled.img`
+  background-size: cover;
+  position: absolute;
+  width: ${(props) => `${props.tamanhoTotal}%`};
+  top: ${(props) => `${props.distanciaTop}em`};
+  left: ${(props) => `${props.distanciaEsquerda}em`};
 `;

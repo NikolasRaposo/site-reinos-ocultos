@@ -1,42 +1,85 @@
-import { FaFacebook, FaInstagram, FaTwitch, FaTwitter } from "react-icons/fa";
-import Container from "react-bootstrap/Container";
-//import Footer from "react-bootstrap/Navbar";
-import Style from "./style.module.css";
-
-import escrita from "../../../assets/img/Escrita Reinos Ocultos Sem espaco.png";
+import {
+  Footer,
+  Titulo,
+  Seção,
+  Divisão,
+  Paragrafo,
+  IconeFundo,
+} from "./styles";
+import oculto from "../../../assets/img/Simbolo site.svg";
+import { PiTiktokLogoFill } from "react-icons/pi";
+import { GrInstagram } from "react-icons/gr";
+import { FaTwitch } from "react-icons/fa";
+import LinkButton from "../../02_OBJECTS/LinkButton";
 
 export default function index() {
   return (
-    <footer className={Style.footer}>
-      <Container fluid >
-      <section className={`ms-5 py-5 col-sm-4`}>
-          <p>
-              Nosso grupo de RPG é formado por jogadores apaixonados que se
-              dedicam a criar histórias incríveis juntos. Se você é novo no
-              mundo dos jogos de RPG, não se preocupe: estamos sempre dispostos
-              a ajudar a ensinar. Junte-se a nós e descubra um novo universo de
-              possibilidades!
-            </p>
-            <img src={escrita} alt="Reinos Ocultos" className={`img-fluid`} />
-            <ul className={Style.social_list}>
-              <li>
-                <FaTwitch />
-              </li>
-              <li>
-                <FaInstagram />
-              </li>
-              <li>
-                <FaFacebook />
-              </li>
-              <li>
-                <FaTwitter />
-              </li>
-            </ul>
-            <p className={Style.copy_right}>
-              <span>Reinos Ocultos</span> &copy; 2023
-            </p>
-        </section>
-      </Container>
-    </footer>
+    <Footer borda={0} fundoCor={"whiteRO"}>
+      <Seção borda={0} conteudoOcultado={"hidden"} position={"relative"}>
+        <Divisão
+          borda={0}
+          tamanhoTotal={43}
+          margemVertical={3.5}
+          margemHorizontal={3}
+        >
+          <Titulo
+            borda={0}
+            tamanhoTotal={43}
+            fontePeso={"bold"}
+            fontSize={4}
+            alturaLinha={1}
+          >
+            Seja um ocultinho
+          </Titulo>
+          <Paragrafo
+            borda={0}
+            fontSize={1.5}
+            margemTopo={1}
+            tamanhoTotal={70}
+            alturaLinha={1.2}
+          >
+            entre em contato ou participe de nossas comunidades no telegram,
+            whatsapp ou discord.
+          </Paragrafo>
+          <Divisão
+            borda={0}
+            disposicao={"flex"}
+            alinharConteudo={"center"}
+            distanciaEntre={"2"}
+            iconSize={1.4}
+            margemTopo={3}
+          >
+            <LinkButton fontSize={1.3} fontFamily={'GothamMedium'} to="/sobre" text="grupos" />
+            <FaTwitch />
+            <PiTiktokLogoFill />
+            <GrInstagram />
+          </Divisão>
+        </Divisão>
+        <IconeFundo
+          tamanhoTotal={40}
+          distanciaTop={-8}
+          distanciaEsquerda={70}
+          src={oculto}
+        />
+      </Seção>
+      <Seção
+        borda={0}
+        justificarConteudo={"center"}
+        fundoCor={"blackRO"}
+        display={"flex"}
+      >
+        <Divisão borda={0}>
+          <Paragrafo
+            borda={0}
+            fontSize={1}
+            margemTopo={1}
+            tamanhoTotal={100}
+            cor={"whiteRO"}
+          >
+            2023 &copy; Reinos Ocultos
+          </Paragrafo>
+        </Divisão>
+      </Seção>
+    </Footer>
   );
 }

@@ -1,12 +1,21 @@
 import { Link } from "react-router-dom";
-import styles from "./style.module.css";
+import { Botao } from "./styles";
 
-export default function LinkButton({ to, text, styleConfig }) {  
-  return (    
-    <div id='linkdiv' style={styleConfig}>
-      <Link className={styles.btn} to={to}>
-        {text}
-      </Link>
-    </div>
+export default function LinkButton({
+  to,
+  text,
+  margemTopo,
+  fontSize,
+  fontFamily,
+}) {
+  return (
+    <Botao
+      fontSize={fontSize}
+      fontFamily={fontFamily}
+      color={"whiteRO"}
+      margemTopo={margemTopo}
+    >
+      <Link to={to}>{text}</Link>
+    </Botao>
   );
 }

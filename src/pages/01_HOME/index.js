@@ -20,9 +20,10 @@ export default function Index() {
           <Paragrafo
             borda={0}
             fontSize={1.5}
-            espacamento={5}
-            margemTopo={1.5}
+            espacamento={1}
+            margemTopo={1}
             alinhamento={"justify"}
+            tamanhoTotal={80}
           >
             somos um conglomerado de universos que se encontram em um gigantesco
             e completo cenário de Fantasia Medieval. Dentro de nossos mundos
@@ -31,9 +32,11 @@ export default function Index() {
             brasileira e influência de diversas obras literárias.
           </Paragrafo>
           <LinkButton
-            styleConfig={{ marginTop: "4em" }}
+            margemTopo={3}
+            fontFamily={"GothamMedium"}
+            fontSize={1.3}
             to="/sobre"
-            text="entre na masmorra"
+            text="pergaminho"
           />
         </Divisão>
       </Seção>
@@ -59,9 +62,9 @@ export default function Index() {
           <Paragrafo
             borda={0}
             fontSize={1.1}
-            espacamento={5}
+            espacamento={1}
             margemTopo={1}
-            tamanhoTotal={68.5}
+            tamanhoTotal={66}
             alinhamento={"justify"}
           >
             Há éons passados, emergiu dos recantos misteriosos da história um
@@ -76,14 +79,14 @@ export default function Index() {
       </Seção>
 
       <Seção
-        borda={1}
+        borda={0}
         espacoVertical={10}
         espacoHorizontal={0}
         justificarConteudo={"center"}
         alinharConteudo={"center"}
         direcaoConteudo={"column"}
       >
-        <Divisão borda={1} tamanhoTotal={46}>
+        <Divisão borda={0} tamanhoTotal={46}>
           <Titulo borda={0} fontSize={1.8} alinhamento={"center"}>
             Conheça os "ocultinhos" de Reinos Ocultos, os bravos aventureiros de
             masmorras com dragões. Descubra as mentes criativas por trás de
@@ -92,12 +95,13 @@ export default function Index() {
           </Titulo>
         </Divisão>
         <Divisão
-          borda={1}
+          borda={0}
           tamanhoTotal={46}
           disposicao={"flex"}
           justificarConteudo={"center"}
           alinharConteudo={"flex-end"}
           quebraLinha={"wrap"}
+          margemTopo={3}
         >
           <Perfil src={oculto} />
           <Perfil src={oculto} />

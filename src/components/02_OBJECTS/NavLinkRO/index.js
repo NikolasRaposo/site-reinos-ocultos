@@ -1,11 +1,11 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
-import Style from "./style.module.css";
+import { Links } from "./styles";
 
 export default function NavLink({ href, text }) {
   return (
-    <div className={Style.link}>
+    <Links>
       <Nav.Link href={href}>{text}</Nav.Link>
-    </div>
+    </Links>
   );
 }
