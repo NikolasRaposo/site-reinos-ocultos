@@ -1,8 +1,25 @@
 import fundo from "../../assets/img/Banner.png";
-import oculto from "../../assets/img/Prancheta.png";
+import letreiro from "../../assets/img/Logo horizontal.svg"
+//import oculto from "../../assets/img/Prancheta.png";
+import Amanda from "../../assets/img/Jogadores/Amanda.png";
+import Camili from "../../assets/img/Jogadores/Camili-site.png";
+import Hugo from "../../assets/img/Jogadores/Hugo.png";
+import Marcio from "../../assets/img/Jogadores/Nelson-site.png";
+import Joao from "../../assets/img/Jogadores/Derik-site.png";
+import Nikolas from "../../assets/img/Jogadores/Nikola-site.png";
+import Pedro from "../../assets/img/Jogadores/Pedro-site.png";
 import LinkButton from "../../components/02_OBJECTS/LinkButton/index";
 import AccordionRO from "../../components/02_OBJECTS/AccordionRO/index";
-import { Titulo, Paragrafo, Divisão, Seção, Container, Perfil } from "./styles";
+import PerfilRO from "../../components/02_OBJECTS/PerfilRO/index";
+import {
+  Titulo,
+  Paragrafo,
+  Divisão,
+  Seção,
+  Container,
+  Grid,
+  Letreiro,
+} from "./styles";
 
 export default function Index() {
   return (
@@ -77,6 +94,15 @@ export default function Index() {
           </Paragrafo>
         </Divisão>
       </Seção>
+      
+      <Seção
+        borda={0}
+        justificarConteudo={"center"}
+        alinharConteudo={"center"}
+        espacoTopo={3}
+      >
+        <Letreiro src={letreiro} width={85} />
+      </Seção>
 
       <Seção
         borda={0}
@@ -94,22 +120,59 @@ export default function Index() {
             criadas.
           </Titulo>
         </Divisão>
-        <Divisão
-          borda={0}
-          tamanhoTotal={46}
-          disposicao={"flex"}
-          justificarConteudo={"center"}
-          alinharConteudo={"flex-end"}
-          quebraLinha={"wrap"}
-          margemTopo={3}
-        >
-          <Perfil src={oculto} />
-          <Perfil src={oculto} />
-          <Perfil src={oculto} />
-          <Perfil src={oculto} />
-          <Perfil src={oculto} />
-          <Perfil src={oculto} />
-        </Divisão>
+
+        <Grid borda={0} tamanhoTotal={46} margemTopo={4} distanciaLinha={1.3}>
+          <PerfilRO
+            img={Hugo}
+            nome={"Hugo Cavali"}
+            papel={"Mestre"}
+            ColumnStart={2}
+            ColumnEnd={3}
+          />
+          <PerfilRO
+            img={Amanda}
+            nome={"Amanda Christine"}
+            papel={"Jogadora"}
+            ColumnStart={1}
+            ColumnEnd={2}
+          />
+          <PerfilRO
+            img={Camili}
+            nome={"Camili Pedroso"}
+            papel={"Jogadora"}
+            ColumnStart={2}
+            ColumnEnd={3}
+          />
+          <PerfilRO
+            img={Joao}
+            nome={"João Coelho"}
+            papel={"Jogador"}
+            
+            ColumnStart={3}
+            ColumnEnd={4}
+          />
+          <PerfilRO
+            img={Marcio}
+            nome={"Marcio Clini"}
+            papel={"Jogador"}
+            ColumnStart={1}
+            ColumnEnd={2}
+          />
+          <PerfilRO
+            img={Nikolas}
+            nome={"Nikolas Raposo"}
+            papel={"Jogador"}
+            ColumnStart={2}
+            ColumnEnd={3}
+          />
+          <PerfilRO
+            img={Pedro}
+            nome={"Pedro Lopes"}
+            papel={"Jogador"}
+            ColumnStart={3}
+            ColumnEnd={4}
+          />
+        </Grid>
       </Seção>
     </Container>
   );

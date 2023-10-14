@@ -8,6 +8,7 @@ export const Container = styled.div`
 export const Seção = styled.section`
   border: ${(props) => `${props.borda}px`} solid red;
   display: flex;
+  padding-top: ${(props) => `${props.espacoTopo}em`};
   flex-direction: ${(props) => `${props.direcaoConteudo}`};
   flex-wrap: ${(props) => `${props.quebraLinha}`};
   column-gap: ${(props) => `${props.distanciaEntre}em`};
@@ -57,8 +58,18 @@ export const Paragrafo = styled.p`
   text-align: ${(props) => `${props.alinhamento}`};
 `;
 
-export const Perfil = styled.img`
-  border-radius: 100%;
-  width: 20%;
-  display: ;
+export const Grid = styled.div`
+  border: ${(props) => `${props.borda}px`} solid red;
+  width: ${(props) => `${props.tamanhoTotal}em`};
+  margin-top: ${(props) => `${props.margemTopo}em`};
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: ${(props) => `${props.distanciaLinha}em`};
+`;
+
+export const Letreiro = styled.img`
+  border: ${(props) => `${props.borda}px`} solid red;
+  width:  ${(props) => `${props.width}%`};
+  height: ${(props) => `${props.height}%`};
+  
 `;

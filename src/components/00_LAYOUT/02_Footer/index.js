@@ -58,7 +58,7 @@ export default function index() {
         <IconeFundo
           tamanhoTotal={40}
           distanciaTop={-8}
-          distanciaEsquerda={70}
+          distanciaEsquerda={67}
           src={oculto}
         />
       </Seção>

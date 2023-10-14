@@ -1,5 +1,6 @@
 import Accordion from "react-bootstrap/Accordion";
 import AccordionItemRO from "../AccordionItemRO/index";
+import oculto from "../../../assets/img/logo.svg";
 
 export default function AccordionRO() {
   return (
@@ -7,12 +8,22 @@ export default function AccordionRO() {
       <style type="text/css">
         {`
         .accordion {
-
-          --bs-accordion-border-color: var(--grayRO);
-          --bs-accordion-bg: var(--blackRO);
-          --bs-accordion-color: var(--whiteRO);
-          --bs-accordion-btn-bg: var(--blackRO);
-          --bs-accordion-btn-color: var(--whiteRO);
+          --bs-accordion-color: var(--whiteRO); /*Cor do texto interior*/
+          --bs-accordion-bg: var(--blackRO); /*Cor do fundo do texto interior*/
+          /*--bs-accordion-transition: x*/ /*Transição*/
+          --bs-accordion-border-color: var(--grayRO); /*Cor da borda do accordion*/
+          /*--bs-accordion-border-width: 1px;*/ /*Tamanho da borda do accordion*/
+          /*--bs-accordion-border-radius: 5px;*/ /*Arredondamento das pontas da borda do accordion*/
+          /*--bs-accordion-inner-border-radius: 50%;*/ /*Arredondamento da borda interior do accordion*/
+          /*--bs-accordion-btn-padding-x: 1em;*/ /*Distancia horizontal do texto superior da borda do accordion*/
+          /*--bs-accordion-btn-padding-y: 1em;*/ /*Distancia vertical do texto superior da borda do accordion*/
+          --bs-accordion-btn-color: var(--whiteRO); /*Cor do texto superior*/
+          --bs-accordion-btn-bg: var(--blackRO); /*Cor do fundo do texto superior*/
+          /*--bs-accordion-btn-icon: ${oculto};*/ /*icone do accordion fechado*/
+          /*--bs-accordion-btn-icon-width: 1em;*/ /*tamanho do icone do accordion*/
+          /*--bs-accordion-btn-icon-transform: rotate(180deg);*/ /*rotação do icone do accordion quando abre*/
+          /*--bs-accordion-btn-icon-transition: transform .5s ease-in-out;*/ /*tempo para rotação do icone do accordion quando abre*/
+          --bs-accordion-btn-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>"); /*icone do accordion aberto*/
           --bs-accordion-btn-focus-box-shadow: none;
           --bs-accordion-active-color: var(--whiteRO);
           --bs-accordion-active-bg: var(--blackRO);
