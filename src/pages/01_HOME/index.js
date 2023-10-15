@@ -52,7 +52,7 @@ export default function Index() {
             margemTopo={3}
             fontFamily={"GothamMedium"}
             fontSize={1.3}
-            to="/sobre"
+            to="/blog"
             text="pergaminho"
           />
         </Divisão>

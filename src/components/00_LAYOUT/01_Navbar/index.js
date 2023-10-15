@@ -26,9 +26,9 @@ export default function index() {
               <NavLink href="/blog" text="BLOG" />
               <NavLink href="/campanhas" text="CAMPANHAS" />
               <NavLink href="/loja" text="AVENTURAS" />
-              <NavLink href="/contato" text="CONTATO" />
-              <Nav.Link href="/">
-                <LinkButton fontFamily={'GothamBook'} to="/sobre" text="LIVE NA TWITCH" />
+              <NavLink href="#grupos" text="CONTATO" />
+              <Nav.Link href="https://www.twitch.tv/reinosocultosrpg">
+                <LinkButton fontFamily={'GothamBook'} to="https://www.twitch.tv/reinosocultosrpg" target={"_blank"} rel={"noopener noreferrer"} text="LIVE NA TWITCH" />
               </Nav.Link>
             </Nav>
           </Links>

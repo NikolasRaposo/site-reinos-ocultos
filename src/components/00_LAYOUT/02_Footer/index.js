@@ -14,7 +14,7 @@ import LinkButton from "../../02_OBJECTS/LinkButton";
 
 export default function index() {
   return (
-    <Footer borda={0} fundoCor={"whiteRO"}>
+    <Footer borda={0} fundoCor={"whiteRO"} id="grupos">
       <Seção borda={0} conteudoOcultado={"hidden"} position={"relative"}>
         <Divisão
           borda={0}
@@ -41,6 +41,7 @@ export default function index() {
             entre em contato ou participe de nossas comunidades no telegram,
             whatsapp ou discord.
           </Paragrafo>
+          
           <Divisão
             borda={0}
             disposicao={"flex"}
@@ -49,12 +50,14 @@ export default function index() {
             iconSize={1.4}
             margemTopo={3}
           >
-            <LinkButton fontSize={1.3} fontFamily={'GothamMedium'} to="/sobre" text="grupos" />
+            <LinkButton fontSize={1.3} fontFamily={'GothamMedium'} to="https://linktr.ee/reinosocultos" target={"_blank"} rel={"noopener noreferrer"} text="grupos" />
             <FaTwitch />
             <PiTiktokLogoFill />
             <GrInstagram />
           </Divisão>
+          
         </Divisão>
+        
         <IconeFundo
           tamanhoTotal={40}
           distanciaTop={-8}
@@ -67,6 +70,7 @@ export default function index() {
         justificarConteudo={"center"}
         fundoCor={"blackRO"}
         display={"flex"}
+        
       >
         <Divisão borda={0}>
           <Paragrafo

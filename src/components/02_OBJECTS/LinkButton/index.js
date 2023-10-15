@@ -7,6 +7,8 @@ export default function LinkButton({
   margemTopo,
   fontSize,
   fontFamily,
+  target,
+  rel
 }) {
   return (
     <Botao
@@ -15,7 +17,7 @@ export default function LinkButton({
       color={"whiteRO"}
       margemTopo={margemTopo}
     >
-      <Link to={to}>{text}</Link>
+      <Link target={target} rel={rel} to={to}>{text}</Link>
     </Botao>
   );
 }
