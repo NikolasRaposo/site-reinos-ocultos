@@ -19,6 +19,7 @@ import {
   Container,
   Grid,
   Letreiro,
+  LetreiroLink,
 } from "./styles";
 
 export default function Index() {
@@ -52,8 +53,12 @@ export default function Index() {
             margemTopo={3}
             fontFamily={"GothamMedium"}
             fontSize={1.3}
-            to="/blog"
+            to="https://www.worldanvil.com/w/namar-darknesshugo"
             text="pergaminho"
+            target={"_blank"}
+            rel={"noopener noreferrer"}
+            bgColorHover={'whiteRO'}
+            colorHover={'blackRO'}
           />
         </Divisão>
       </Seção>
@@ -69,6 +74,7 @@ export default function Index() {
         <Divisão borda={0} tamanhoTotal={100}>
           <Titulo
             borda={0}
+            margemTopo={-0.2}
             fontSize={2}
             tamanhoTotal={48}
             cor={"redRO"}
@@ -101,7 +107,9 @@ export default function Index() {
         alinharConteudo={"center"}
         espacoTopo={3}
       >
-        <Letreiro src={letreiro} width={85} />
+        <LetreiroLink border={0} width={85} href="/campanhas">
+        <Letreiro src={letreiro} width={100} />
+        </LetreiroLink>
       </Seção>
 
       <Seção

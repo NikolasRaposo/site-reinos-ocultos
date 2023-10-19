@@ -15,7 +15,7 @@ export const Botao = styled.div`
     transition: 0.5s;
   }
   a:hover {
-    background-color: var(--lightRedRO);
-    color: var(--whiteRO);
+    background-color: ${(props) => `var(--${props.bgColorHover})`};
+    color: ${(props) => `var(--${props.colorHover})`};
   }
 `;

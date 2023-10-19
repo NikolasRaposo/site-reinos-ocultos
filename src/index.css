@@ -69,9 +69,14 @@
   font-family: GothamBook;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 #root {
   background-color: var(--blackRO);
   height: 100%;
 }
+

@@ -23,7 +23,7 @@ export default function AccordionRO() {
           /*--bs-accordion-btn-icon-width: 1em;*/ /*tamanho do icone do accordion*/
           /*--bs-accordion-btn-icon-transform: rotate(180deg);*/ /*rotação do icone do accordion quando abre*/
           /*--bs-accordion-btn-icon-transition: transform .5s ease-in-out;*/ /*tempo para rotação do icone do accordion quando abre*/
-          --bs-accordion-btn-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>"); /*icone do accordion aberto*/
+          bs-accordion-btn-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>"); /*icone do accordion aberto*/
           --bs-accordion-btn-focus-box-shadow: none;
           --bs-accordion-active-color: var(--whiteRO);
           --bs-accordion-active-bg: var(--blackRO);

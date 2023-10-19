@@ -4,7 +4,8 @@ import {
   Seção,
   Divisão,
   Paragrafo,
-  IconeFundo,
+  IconeLink,
+  LogoFundo,
 } from "./styles";
 import oculto from "../../../assets/img/Simbolo site.svg";
 import { PiTiktokLogoFill } from "react-icons/pi";
@@ -41,7 +42,7 @@ export default function index() {
             entre em contato ou participe de nossas comunidades no telegram,
             whatsapp ou discord.
           </Paragrafo>
-          
+
           <Divisão
             borda={0}
             disposicao={"flex"}
@@ -50,15 +51,42 @@ export default function index() {
             iconSize={1.4}
             margemTopo={3}
           >
-            <LinkButton fontSize={1.3} fontFamily={'GothamMedium'} to="https://linktr.ee/reinosocultos" target={"_blank"} rel={"noopener noreferrer"} text="grupos" />
-            <FaTwitch />
-            <PiTiktokLogoFill />
-            <GrInstagram />
+            <LinkButton
+              fontSize={1.3}
+              fontFamily={"GothamMedium"}
+              to="https://linktr.ee/reinosocultos"
+              target={"_blank"}
+              rel={"noopener noreferrer"}
+              text="grupos"
+              bgColorHover={'blackRO'}
+              colorHover={'whiteRO'}
+            />
+
+            <IconeLink
+              href="https://www.twitch.tv/reinosocultosrpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitch />
+            </IconeLink>
+            <IconeLink
+              href="https://www.tiktok.com/@reinosocultosrpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <PiTiktokLogoFill />
+            </IconeLink>
+            <IconeLink
+              href="https://www.instagram.com/reinosocultos/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GrInstagram />
+            </IconeLink>
           </Divisão>
-          
         </Divisão>
-        
-        <IconeFundo
+
+        <LogoFundo
           tamanhoTotal={40}
           distanciaTop={-8}
           distanciaEsquerda={67}
@@ -70,7 +98,6 @@ export default function index() {
         justificarConteudo={"center"}
         fundoCor={"blackRO"}
         display={"flex"}
-        
       >
         <Divisão borda={0}>
           <Paragrafo

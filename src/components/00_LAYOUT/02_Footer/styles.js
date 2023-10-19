@@ -77,7 +77,13 @@ export const Paragrafo = styled.p`
   line-height: ${(props) => `${props.alturaLinha}em`};
 `;
 
-export const IconeFundo = styled.img`
+export const IconeLink = styled.a`
+  svg {
+    color: var(--blackRO);
+  }
+`;
+
+export const LogoFundo = styled.img`
   background-size: cover;
   position: absolute;
   width: ${(props) => `${props.tamanhoTotal}%`};

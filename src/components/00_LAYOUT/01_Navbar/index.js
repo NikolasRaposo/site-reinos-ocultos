@@ -4,9 +4,11 @@ import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../../assets/img/logo_ro.png";
 import NavLink from "../../02_OBJECTS/NavLinkRO/index";
 import LinkButton from "../../02_OBJECTS/LinkButton/index";
+import ScrollTo from "../../02_OBJECTS/ScrollTo/index";
 import { Links } from "./styles";
 
-export default function index() {
+
+export default function Index() {
   return (
     <Navbar expand="lg" variant="whiteRO">
       <Container fluid>
@@ -21,14 +23,25 @@ export default function index() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end fw-bold me-4">
           <Links fontSize={1.2}>
-            <Nav>
+            <Nav
+              variant="underline"
+              defaultActiveKey={window.location.pathname}
+            >
               <NavLink href="/" text="INICIO" />
-              <NavLink href="/blog" text="BLOG" />
               <NavLink href="/campanhas" text="CAMPANHAS" />
-              <NavLink href="/loja" text="AVENTURAS" />
+              <NavLink href="/aventuras" text="AVENTURAS" />
               <NavLink href="#grupos" text="CONTATO" />
+              <ScrollTo href="grupos" text="CONTATO" />
               <Nav.Link href="https://www.twitch.tv/reinosocultosrpg">
-                <LinkButton fontFamily={'GothamBook'} to="https://www.twitch.tv/reinosocultosrpg" target={"_blank"} rel={"noopener noreferrer"} text="LIVE NA TWITCH" />
+                <LinkButton
+                  fontFamily={"GothamBook"}
+                  to="https://www.twitch.tv/reinosocultosrpg"
+                  target={"_blank"}
+                  rel={"noopener noreferrer"}
+                  text="LIVE NA TWITCH"
+                  bgColorHover={"blackRO"}
+                  colorHover={"whiteRO"}
+                />
               </Nav.Link>
             </Nav>
           </Links>

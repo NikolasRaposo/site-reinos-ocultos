@@ -8,7 +8,9 @@ export default function LinkButton({
   fontSize,
   fontFamily,
   target,
-  rel
+  rel,
+  bgColorHover,
+  colorHover
 }) {
   return (
     <Botao
@@ -16,6 +18,8 @@ export default function LinkButton({
       fontFamily={fontFamily}
       color={"whiteRO"}
       margemTopo={margemTopo}
+      bgColorHover={bgColorHover}
+      colorHover={colorHover}
     >
       <Link target={target} rel={rel} to={to}>{text}</Link>
     </Botao>

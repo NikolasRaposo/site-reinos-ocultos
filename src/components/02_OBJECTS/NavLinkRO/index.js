@@ -4,8 +4,8 @@ import { Links } from "./styles";
 
 export default function NavLink({ href, text }) {
   return (
-    <Links>
-      <Nav.Link href={href}>{text}</Nav.Link>
+    <Links border={0} marginRight={0.5}>
+        <Nav.Link className={text} href={href}>{text}</Nav.Link>
     </Links>
   );
 }

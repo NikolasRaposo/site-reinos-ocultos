@@ -42,6 +42,7 @@ export const Titulo = styled.h1`
   border: ${(props) => `${props.borda}px`} solid red;
   font-family: GothamMedium;
   font-weight: ${(props) => `${props.fontePeso}`};
+  margin-top: ${(props) => `${props.margemTopo}em`};
   color: ${(props) => `var(--${props.cor})`};
   width: ${(props) => `${props.tamanhoTotal}%`};
   font-size: ${(props) => `${props.fontSize}em`};
@@ -71,5 +72,10 @@ export const Letreiro = styled.img`
   border: ${(props) => `${props.borda}px`} solid red;
   width:  ${(props) => `${props.width}%`};
   height: ${(props) => `${props.height}%`};
-  
+  cursor: pointer;
+`;
+
+export const LetreiroLink = styled.a`
+  border: ${(props) => `${props.border}px`} solid red;
+  width:  ${(props) => `${props.width}%`};
 `;
