@@ -22,15 +22,14 @@ export default function Index() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end fw-bold me-4">
-          <Links fontSize={1.2}>
+          <Links border={0} fontSize={1.2}>
             <Nav
-              variant="underline"
+
               defaultActiveKey={window.location.pathname}
             >
               <NavLink href="/" text="INICIO" />
               <NavLink href="/campanhas" text="CAMPANHAS" />
               <NavLink href="/aventuras" text="AVENTURAS" />
-              <NavLink href="#grupos" text="CONTATO" />
               <ScrollTo href="grupos" text="CONTATO" />
               <Nav.Link href="https://www.twitch.tv/reinosocultosrpg">
                 <LinkButton
