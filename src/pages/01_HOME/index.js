@@ -1,6 +1,11 @@
+//COMPONENTES
+import LinkButton from "../../components/02_OBJECTS/LinkButton/index";
+import AccordionRO from "../../components/02_OBJECTS/AccordionRO/index";
+import PerfilRO from "../../components/02_OBJECTS/PerfilRO/index";
+//IMAGEM GERAIS
 import fundo from "../../assets/img/Banner.png";
-import letreiro from "../../assets/img/Logo horizontal.svg"
-//import oculto from "../../assets/img/Prancheta.png";
+import letreiro from "../../assets/img/Logo horizontal.svg";
+//IMAGEM DOS JOGADORES
 import Amanda from "../../assets/img/Jogadores/Amanda.png";
 import Camili from "../../assets/img/Jogadores/Camili-site.png";
 import Hugo from "../../assets/img/Jogadores/Hugo.png";
@@ -8,128 +13,137 @@ import Marcio from "../../assets/img/Jogadores/Nelson-site.png";
 import Joao from "../../assets/img/Jogadores/Derik-site.png";
 import Nikolas from "../../assets/img/Jogadores/Nikola-site.png";
 import Pedro from "../../assets/img/Jogadores/Pedro-site.png";
-import LinkButton from "../../components/02_OBJECTS/LinkButton/index";
-import AccordionRO from "../../components/02_OBJECTS/AccordionRO/index";
-import PerfilRO from "../../components/02_OBJECTS/PerfilRO/index";
+//STYLED COMPONENTS
 import {
-  Titulo,
-  Paragrafo,
-  Divisão,
+  DivisãoFlex,
+  TituloFlex,
+  TextoFlex,
+  SeçãoFlex,
+  GridFlex,
   Seção,
   Container,
-  Grid,
   Letreiro,
   LetreiroLink,
+  OnlyDesktop,
+  TextoLetreiro,
 } from "./styles";
 
 export default function Index() {
   return (
     <Container cor={"whiteRO"}>
-      <Seção borda={0} imagem={fundo}>
-        <Divisão
-          borda={0}
-          tamanhoTotal={43}
-          margemVertical={5}
-          margemHorizontal={3}
+      {/*BANNER*/}
+      <Seção border={0} imagem={fundo}>
+        <DivisãoFlex
+          border={0}
+          width={30}
+          marginY={4}
+          marginX={2.5}
+          width425={80}
         >
-          <Titulo borda={0} fontSize={2.5} tamanhoTotal={70} fontePeso={"bold"}>
-            Descubra os segredos dos Reinos Ocultos...
-          </Titulo>
-          <Paragrafo
-            borda={0}
-            fontSize={1.5}
-            espacamento={1}
-            margemTopo={1}
-            alinhamento={"justify"}
-            tamanhoTotal={80}
-          >
+          <TituloFlex border={0} fontSize={2.12} fontWeight={"bold"}>
+            Descubra os segredos <br />
+            dos reinos ocultos...
+          </TituloFlex>
+
+          <TextoFlex border={0} fontSize={1.28} marginTop={4}>
             somos um conglomerado de universos que se encontram em um gigantesco
             e completo cenário de Fantasia Medieval. Dentro de nossos mundos
             cheios de diversidades e uma pitada de caos, estamos construindo uma
-            nova forma de contar uma história, com um cenário de autória
+            nova forma de contar histórias, com um cenário de autoria
             brasileira e influência de diversas obras literárias.
-          </Paragrafo>
+          </TextoFlex>
+
           <LinkButton
-            margemTopo={3}
+            margemTopo={10}
             fontFamily={"GothamMedium"}
-            fontSize={1.3}
+            fontSize={1}
             to="https://www.worldanvil.com/w/namar-darknesshugo"
             text="pergaminho"
             target={"_blank"}
             rel={"noopener noreferrer"}
-            bgColorHover={'whiteRO'}
-            colorHover={'blackRO'}
+            bgColorHover={"whiteRO"}
+            colorHover={"blackRO"}
           />
-        </Divisão>
+        </DivisãoFlex>
       </Seção>
-      <Seção
-        borda={0}
-        espacoVertical={5}
-        espacoHorizontal={3}
-        distanciaEntre={15}
-      >
-        <Divisão borda={0} tamanhoTotal={90}>
+      {/*ACCORDION*/}
+      <SeçãoFlex border={0} paddingY={5} paddingX={2.5} distanciaEntre={12}>
+        <DivisãoFlex border={0} width={100} >
           <AccordionRO />
-        </Divisão>
-        <Divisão borda={0} tamanhoTotal={100}>
-          <Titulo
-            borda={0}
-            margemTopo={-0.2}
-            fontSize={2}
-            tamanhoTotal={48}
-            cor={"redRO"}
-            fontePeso={"bold"}
+        </DivisãoFlex>
+        <OnlyDesktop>
+          <DivisãoFlex
+            border={0}
+            width={100}
+            disposicao={"flex"}
+            direcaoConteudo={"column"}
+            alinharConteudo={"end"}
           >
-            O universo e histórias de reinos ocultos
-          </Titulo>
-          <Paragrafo
-            borda={0}
-            fontSize={1.1}
-            espacamento={1}
-            margemTopo={1}
-            tamanhoTotal={66}
-            alinhamento={"justify"}
-          >
-            Há éons passados, emergiu dos recantos misteriosos da história um
-            dos primeiros magos que o mundo já conheceu, um ser lendário de nome
-            Merlin. Ele mergulhou nas profundezas sedutoras da magia, abraçando
-            seu poder com ousadia inigualável. Com coragem e determinação,
-            desafiou todos os terrenos conhecidos para um conflito épico e
-            tumultuado, que abalou os alicerces da existência e lançou os Reinos
-            Ocultos pelo mundo.
-          </Paragrafo>
-        </Divisão>
-      </Seção>
-      
+            <TituloFlex
+              fontWeight={"bold"}
+              border={0}
+              fontSize={1.7}
+              color={"redRO"}
+              marginTop={-0.4}
+              textAlign={"right"}
+            >
+              O universo e histórias <br />
+              de Reinos Ocultos
+            </TituloFlex>
+            <TextoFlex
+              border={0}
+              fontSize={0.95}
+              marginTop={2}
+              alinhamento={"right"}
+              width={90}
+            >
+              Há éons passados, emergiu dos recantos misteriosos da história um
+              dos primeiros magos que o mundo já conheceu, um ser lendário de
+              nome Merlin. Ele mergulhou nas profundezas sedutoras da magia,
+              abraçando seu poder com ousadia inigualável. Com coragem e
+              determinação, desafiou todos os terrenos conhecidos para um
+              conflito épico e tumultuado, que abalou os alicerces da existência
+              e lançou os Reinos Ocultos pelo mundo.
+            </TextoFlex>
+          </DivisãoFlex>
+        </OnlyDesktop>
+      </SeçãoFlex>
+      {/*LETREIERO*/}
       <Seção
-        borda={0}
+        border={0}
         justificarConteudo={"center"}
         alinharConteudo={"center"}
-        espacoTopo={3}
+        paddingTop={3}
       >
         <LetreiroLink border={0} width={85} href="/campanhas">
-        <Letreiro src={letreiro} width={100} />
+          <Letreiro src={letreiro} width={100} />
         </LetreiroLink>
       </Seção>
-
+      {/*OCULTINHOS*/}
       <Seção
-        borda={0}
-        espacoVertical={10}
-        espacoHorizontal={0}
+        border={0}
+        paddingTop={2}
+        paddingBottom={10}
         justificarConteudo={"center"}
         alinharConteudo={"center"}
         direcaoConteudo={"column"}
       >
-        <Divisão borda={0} tamanhoTotal={46}>
-          <Titulo borda={0} fontSize={1.8} alinhamento={"center"}>
+        <DivisãoFlex border={0} marginY={0} marginX={20} marginY425={0} marginX425={10}>
+          <TituloFlex border={0} fontSize={1.53} textAlign={"center"}>
             Conheça os "ocultinhos" de Reinos Ocultos, os bravos aventureiros de
             masmorras com dragões. Descubra as mentes criativas por trás de
-            nossas suas aventuras e mergulhe nas histórias épicas que são
+            nossas aventuras e mergulhe nas histórias épicas que são
             criadas.
-          </Titulo>
-        </Divisão>
-
-        <Grid borda={0} tamanhoTotal={46} margemTopo={4} distanciaLinha={1.3}>
+          </TituloFlex>
+        </DivisãoFlex>
+        <GridFlex
+          border={0}
+          width={40}
+          margemTopo={3.5}
+          rowGap={5}
+          columnGap={10}
+          width425={60}
+        >
           <PerfilRO
             img={Hugo}
             nome={"Hugo Cavali"}
@@ -155,7 +169,6 @@ export default function Index() {
             img={Joao}
             nome={"João Coelho"}
             papel={"Jogador"}
-            
             ColumnStart={3}
             ColumnEnd={4}
           />
@@ -180,21 +193,8 @@ export default function Index() {
             ColumnStart={3}
             ColumnEnd={4}
           />
-        </Grid>
+        </GridFlex>
       </Seção>
     </Container>
   );
 }
-
-/*TODO Aumentar a fonte do titulo*/
-/*Reduzir a largura do accordion*/
-
-/*Corrigir o espaçamento e o tamanho da fonte*/
-
-/*3X*/
-/*ABA DE OCULTINHOS*/
-/*Texto tamanho de titulo*/
-/*Balão com a foto da pessoa, nome e titulo*/
-
-/*2X*/
-/*RODAPÉ*/

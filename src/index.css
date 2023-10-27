@@ -6,6 +6,24 @@
   --lightRedRO: #F00026;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: GothamBook;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  background-color: var(--blackRO);
+  height: 100%;
+}
+
 .btn-redRO {
   background-color: var(--redRO);
   color: var(--whiteRO);
@@ -61,22 +79,3 @@
   src: local("GothamMedium"),
     url(./assets/fonts/Gotham/GothamMedium.ttf) format("truetype");
     }
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: GothamBook;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-html,
-body,
-#root {
-  background-color: var(--blackRO);
-  height: 100%;
-}
-

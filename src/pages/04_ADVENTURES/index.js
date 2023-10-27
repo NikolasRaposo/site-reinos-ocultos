@@ -1,11 +1,13 @@
+import Justa from "../../assets/pdfs/ROJustaSolene.pdf";
+import Azalen from "../../assets/pdfs/ROSombrasAzalen.pdf";
 import fundo01 from "../../assets/img/Banner04.png";
 import fundo02 from "../../assets/img/Banner05.png";
 import fundo03 from "../../assets/img/Banner06.png";
-import Justa from "../../assets/pdfs/ROJustaSolene.pdf";
-import Azalen from "../../assets/pdfs/ROSombrasAzalen.pdf";
-//import oculto from "../../assets/img/Prancheta.png";
+import fundoMobile01 from "../../assets/img/BannerMobile04.png";
+import fundoMobile02 from "../../assets/img/BannerMobile05.png";
+import fundoMobile03 from "../../assets/img/BannerMobile06.png";
 import DownloadButton from "../../components/02_OBJECTS/DownloadButton/index";
-import { Titulo, Paragrafo, Divisão, Seção, Container } from "./styles";
+import { Titulo, Banner, Paragrafo, Divisão, Seção, Container } from "./styles";
 
 export default function Index() {
   return (
@@ -16,15 +18,16 @@ export default function Index() {
         margemVertical={2}
         margemHorizontal={0}
       >
-        <Titulo borda={0} fontSize={1.5} cor={"whiteRO"}>
+        <Titulo borda={0} fontSize={1.5} cor={"whiteRO"} alinhamento425={"center"} margemTop425={2}>
           AVENTURAS GRATUITAS
         </Titulo>
       </Seção>
-      <Seção borda={0} imagem={fundo01}>
+      <Banner borda={0} src={fundoMobile01} />
+      <Seção borda={0} imagem={fundo01} margemTopo={2} margemBase={6}>
         <Divisão
           borda={0}
           tamanhoTotal={43}
-          margemVertical={5}
+          margemVertical={4}
           margemHorizontal={3}
         >
           <Titulo borda={0} fontSize={2.5} tamanhoTotal={60} fontePeso={"bold"}>
@@ -32,7 +35,7 @@ export default function Index() {
           </Titulo>
           <Paragrafo
             borda={0}
-            fontSize={1.5}
+            fontSize={1.1}
             espacamento={1}
             margemTopo={1}
             tamanhoTotal={100}
@@ -44,9 +47,9 @@ export default function Index() {
             guerreiros...
           </Paragrafo>
           <DownloadButton
-            margemTopo={3}
+            margemTopo={5}
             fontFamily={"GothamMedium"}
-            fontSize={1.3}
+            fontSize={1.1}
             to={Justa}
             arquivo="Justa Solene v1_0"
             text="Download"
@@ -56,17 +59,19 @@ export default function Index() {
         </Divisão>
       </Seção>
 
+      <Banner borda={0} src={fundoMobile02} />
+
       <Seção
         borda={0}
         imagem={fundo02}
-        margemTopo={4}
-        margemBase={8}
+        margemTopo={6}
+        margemBase={6}
         justificarConteudo={"end"}
       >
         <Divisão
           borda={0}
           tamanhoTotal={43}
-          margemVertical={5}
+          margemVertical={4}
           margemHorizontal={3}
           disposicao={"flex"}
           direcaoConteudo={"column"}
@@ -78,12 +83,13 @@ export default function Index() {
             tamanhoTotal={70}
             fontePeso={"bold"}
             alinhamento={"right"}
+            alinhamento425={"left"}
           >
             Sombras de Azalen
           </Titulo>
           <Paragrafo
             borda={0}
-            fontSize={1.5}
+            fontSize={1.1}
             espacamento={1}
             margemTopo={1}
             alinhamento={"right"}
@@ -96,7 +102,7 @@ export default function Index() {
           <DownloadButton
             margemTopo={3}
             fontFamily={"GothamMedium"}
-            fontSize={1.3}
+            fontSize={1.1}
             to={Azalen}
             arquivo="Sombras de Azalen v1_0"
             text="Download"
@@ -105,12 +111,12 @@ export default function Index() {
           />
         </Divisão>
       </Seção>
-
-      <Seção borda={0} imagem={fundo03} margemBase={8}>
+      <Banner borda={0} src={fundoMobile03} />
+      <Seção borda={0} imagem={fundo03} margemTopo={6} margemBase={6}>
         <Divisão
           borda={0}
           tamanhoTotal={43}
-          margemVertical={2}
+          margemVertical={4}
           margemHorizontal={3}
         >
           <Titulo borda={0} fontSize={2.5} tamanhoTotal={60} fontePeso={"bold"}>
@@ -118,7 +124,7 @@ export default function Index() {
           </Titulo>
           <Paragrafo
             borda={0}
-            fontSize={1.5}
+            fontSize={1.1}
             espacamento={1}
             margemTopo={1}
             tamanhoTotal={100}

@@ -20,8 +20,8 @@ export default function index() {
         <Divisão
           borda={0}
           tamanhoTotal={43}
-          margemVertical={3.5}
-          margemHorizontal={3}
+          margemVertical={5}
+          margemHorizontal={2.5}
         >
           <Titulo
             borda={0}
@@ -34,7 +34,7 @@ export default function index() {
           </Titulo>
           <Paragrafo
             borda={0}
-            fontSize={1.5}
+            fontSize={1.53}
             margemTopo={1}
             tamanhoTotal={70}
             alturaLinha={1.2}
@@ -67,7 +67,7 @@ export default function index() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitch />
+              <FaTwitch className='Twitch'/>
             </IconeLink>
             <IconeLink
               href="https://www.tiktok.com/@reinosocultosrpg"
@@ -104,7 +104,7 @@ export default function index() {
             borda={0}
             fontSize={1}
             margemTopo={1}
-            tamanhoTotal={100}
+
             cor={"whiteRO"}
           >
             2023 &copy; Reinos Ocultos

@@ -28,6 +28,9 @@ export default function AccordionRO() {
           --bs-accordion-active-color: var(--whiteRO);
           --bs-accordion-active-bg: var(--blackRO);
         }
+        .accordion-button::after {
+          background-image: var(--bs-accordion-btn-icon);
+        }
       `}
       </style>
       <Accordion>
@@ -39,17 +42,19 @@ export default function AccordionRO() {
         <AccordionItemRO
           eventKey="1"
           header="TERCEIRA ERA (2916 PM > 4171 PM)"
-          body="A era dos novos escolhidos e da destruição de Merlin como um todo, o início da era de paz com o fim das eras de guerra."
+          body="A era dos novos escolhidos e da destruição de Merlin como um todo, o início de um período de paz com o fim da guerra.
+          "
         />
         <AccordionItemRO
           eventKey="2"
           header="ERA ESQUECIDA (4172 PM > 4824 PM)"
-          body="Oque deveria ser a quarta era, foi apagada dos registros dos calendários gerais, foi durante este periodo que a magia morre, a volta da magia inicia oque seria a verdadeira quarta era para os Humanos."
+          body="O que deveria ser a quarta era, foi apagada dos registros dos calendários gerais, foi durante este periodo que a magia morre, e é apenas com a volta desta que se inicia a verdadeira quarta era para os Humanos.
+          "
         />
         <AccordionItemRO
           eventKey="3"
           header="QUARTA ERA (4845)"
-          body="Com a volta da magia e a colisão de Reinos Ocultos, uma era nova se inicia, nova e cheia de mistérios, raças e criaturas nunca antes vistas."
+          body="Com a volta da magia e a colisão de Reinos Ocultos, se inicia uma nova era cheia de mistérios, criaturas e desafios nunca antes vistos."
         />
       </Accordion>
     </>

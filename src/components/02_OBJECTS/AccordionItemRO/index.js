@@ -5,7 +5,7 @@ export default function AccordionItemRO({ eventKey, header, body }) {
     <>
       <Accordion.Item eventKey={eventKey}>
         <Accordion.Header>{header}</Accordion.Header>
-        <Accordion.Body >{body}</Accordion.Body>
+        <Accordion.Body>{body}</Accordion.Body>
       </Accordion.Item>
     </>
   );

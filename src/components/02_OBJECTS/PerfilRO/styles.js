@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 export const Item = styled.div`
   border: ${(props) => `${props.borda}px`} solid red;
+  display: flex;
+  width:  ${(props) => `${props.width}%`};
   grid-column-start: ${(props) => `${props.gridColumnStart}`};
   grid-column-end: ${(props) => `${props.gridColumnEnd}`};
-  width:  ${(props) => `${props.width}em`};
-  justify-content: ${(props) => `${props.justificarConteudo}`};
-  align-items: ${(props) => `${props.alinharConteudo}`};
-  text-align: ${(props) => `${props.alinharTexto}`};
+  justify-content: ${(props) => `${props.justifyContent}`};
+  flex-direction: ${(props) => `${props.flexDirection}`};
+  align-items: ${(props) => `${props.alignItems}`};
+  text-align: ${(props) => `${props.textAlign}`};
 `;
 
 export const Perfil = styled.img`
@@ -20,10 +22,16 @@ export const Perfil = styled.img`
 
 export const PerfilTexto = styled.p`
   border: ${(props) => `${props.borda}px`} solid red;
-  width: ${(props) => `${props.tamanhoTotal}`};
-  font-size: ${(props) => `${props.fontSize}rem`};
-  margin-top: ${(props) => `${props.margemTopo}em`};
+  width: ${(props) => `${props.width}%`};
+  font-size: ${(props) => `${props.fontSize}vw`};
+  margin-top: ${(props) => `${props.margemTopo}%`};
   word-spacing: ${(props) => `${props.espacamento}px`};
   text-align: ${(props) => `${props.alinhamento}`};
-  font-weight: ${(props) => `${props.fontePeso}`};
+
+  span {
+    font-weight: ${(props) => `${props.fontePeso}`};
+  }
+  @media screen and (max-width: 425px) {
+    font-size: ${(props) => `${props.fontSize*2}vw`};
+  }
 `;

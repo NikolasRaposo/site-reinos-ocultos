@@ -40,8 +40,8 @@ export const Divisão = styled.div`
   margin-bottom: ${(props) => `${props.margemBase}em`};
   margin-left: ${(props) => `${props.margemEsquerda}em`};
   margin-right: ${(props) => `${props.margemDireita}em`};
-  margin: ${(props) => `${props.margemVertical}em`}
-    ${(props) => `${props.margemHorizontal}em`};
+  margin: ${(props) => `${props.margemVertical}%`}
+    ${(props) => `${props.margemHorizontal}%`};
 
   svg {
     font-size: ${(props) => `${props.iconSize}em`};
@@ -63,6 +63,10 @@ export const Titulo = styled.h1`
   padding-right: ${(props) => `${props.limiteTexto}em`};
   text-align: ${(props) => `${props.alinhamento}`};
   line-height: ${(props) => `${props.alturaLinha}em`};
+
+  @media screen and (max-width: 425px) {
+    font-size: ${(props) => `${props.fontSize*3}vw`};
+  }
 `;
 
 export const Paragrafo = styled.p`
@@ -70,16 +74,29 @@ export const Paragrafo = styled.p`
   font-family: GothamMedium;
   color: ${(props) => `var(--${props.cor})`};
   width: ${(props) => `${props.tamanhoTotal}%`};
-  font-size: ${(props) => `${props.fontSize}em`};
+  font-size: ${(props) => `${props.fontSize}vw`};
   margin-top: ${(props) => `${props.margemTopo}em`};
   word-spacing: ${(props) => `${props.espacamento}px`};
   text-align: ${(props) => `${props.alinhamento}`};
   line-height: ${(props) => `${props.alturaLinha}em`};
+
+  @media screen and (max-width: 768px) {
+    font-size: ${(props) => `${props.fontSize*1.8}vw`};
+  }
+
+  @media screen and (max-width: 425px) {
+    width: ${(props) => `${props.tamanhoTotal*0.7}%`};
+    font-size: ${(props) => `${props.fontSize*2.5}vw`};
+  }
 `;
 
 export const IconeLink = styled.a`
   svg {
     color: var(--blackRO);
+  }
+
+  .Twitch {
+    margin-top: 5px;
   }
 `;
 
@@ -89,4 +106,6 @@ export const LogoFundo = styled.img`
   width: ${(props) => `${props.tamanhoTotal}%`};
   top: ${(props) => `${props.distanciaTop}em`};
   left: ${(props) => `${props.distanciaEsquerda}em`};
+
+
 `;
