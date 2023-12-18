@@ -7,38 +7,49 @@ import fundoMobile01 from "../../assets/img/BannerMobile04.png";
 import fundoMobile02 from "../../assets/img/BannerMobile05.png";
 import fundoMobile03 from "../../assets/img/BannerMobile06.png";
 import DownloadButton from "../../components/02_OBJECTS/DownloadButton/index";
-import { Titulo, Banner, Paragrafo, Divisão, Seção, Container } from "./styles";
+//STYLED COMPONENTS
+import {
+  Container,
+  Seção,
+  Titulo,
+  Paragrafo,
+  Banner,
+  Divisão
+} from "../styles";
 
 export default function Index() {
   return (
-    <Container cor={"whiteRO"}>
+    <Container border={0} color={"whiteRO"}>
       <Seção
-        borda={0}
-        justificarConteudo={"center"}
-        margemVertical={2}
-        margemHorizontal={0}
+        border={0}
+        justifyContent={"center"}
+        marginY={2}
+        marginX={0}
       >
-        <Titulo borda={0} fontSize={1.5} cor={"whiteRO"} alinhamento425={"center"} margemTop425={2}>
+        <Titulo border={0} fontSize={1.5} color={"whiteRO"} textAlign425={"center"} marginTop425={2}>
           AVENTURAS GRATUITAS
         </Titulo>
       </Seção>
+
       <Banner borda={0} src={fundoMobile01} />
-      <Seção borda={0} imagem={fundo01} margemTopo={2} margemBase={6}>
+
+      <Seção border={0} image={fundo01} marginTop={2} marginBottom={6}>
         <Divisão
-          borda={0}
-          tamanhoTotal={43}
-          margemVertical={4}
-          margemHorizontal={3}
+          border={0}
+          width={40}
+          width768={48}
+          marginY={4}
+          marginX={3}
         >
-          <Titulo borda={0} fontSize={2.5} tamanhoTotal={60} fontePeso={"bold"}>
+          <Titulo border={0} fontSize={2.5} width={60} fontWeight={"bold"}>
             Justa Solene
           </Titulo>
+
           <Paragrafo
-            borda={0}
+            border={0}
             fontSize={1.1}
-            espacamento={1}
-            margemTopo={1}
-            tamanhoTotal={100}
+            wordSpacing={1}
+            marginTop={1}
           >
             No tempo dos últimos escolhidos, os Reinos Ocultos eram muitos
             planos e carregavam seus segredos distantes. Há 7 anos, tudo mudou.
@@ -46,6 +57,7 @@ export default function Index() {
             redesenhado graças à poderosa magia e a ação de corajosos
             guerreiros...
           </Paragrafo>
+
           <DownloadButton
             margemTopo={5}
             fontFamily={"GothamMedium"}
@@ -62,38 +74,41 @@ export default function Index() {
       <Banner borda={0} src={fundoMobile02} />
 
       <Seção
-        borda={0}
-        imagem={fundo02}
-        margemTopo={6}
-        margemBase={6}
-        justificarConteudo={"end"}
+        border={0}
+        image={fundo02}
+        marginTop={6}
+        marginBottom={6}
+        justifyContent={"end"}
       >
         <Divisão
-          borda={0}
-          tamanhoTotal={43}
-          margemVertical={4}
-          margemHorizontal={3}
-          disposicao={"flex"}
-          direcaoConteudo={"column"}
-          alinharConteudo={"end"}
+          border={0}
+          width={40}
+          width1200={55}
+          width768={65}
+          marginY={4}
+          marginX={3}
+          display={"flex"}
+          flexDirection={"column"}
+          alignItems={"end"}
         >
           <Titulo
-            borda={0}
+            border={0}
             fontSize={2.5}
-            tamanhoTotal={70}
-            fontePeso={"bold"}
-            alinhamento={"right"}
-            alinhamento425={"left"}
+            width={70}
+            fontWeight={"bold"}
+            textAlign={"right"}
+            textAlign425={"left"}
           >
             Sombras de Azalen
           </Titulo>
+
           <Paragrafo
-            borda={0}
+            border={0}
             fontSize={1.1}
-            espacamento={1}
-            margemTopo={1}
-            alinhamento={"right"}
-            tamanhoTotal={80}
+            wordSpacing={1}
+            marginTop={1}
+            textAlign={"right"}
+            width={90}
           >
             Sombras de Azalen é uma aventura e parte de um cenário maior de
             Reinos Ocultos chamado Namar onde os aventureiros irão lidar com um
@@ -111,23 +126,27 @@ export default function Index() {
           />
         </Divisão>
       </Seção>
+
       <Banner borda={0} src={fundoMobile03} />
-      <Seção borda={0} imagem={fundo03} margemTopo={6} margemBase={6}>
+
+      <Seção border={0} image={fundo03} marginTop={6} marginBottom={6}>
         <Divisão
-          borda={0}
-          tamanhoTotal={43}
-          margemVertical={4}
-          margemHorizontal={3}
+          border={0}
+          width={40}
+          width1200={50}
+          width768={60}
+          marginY={4}
+          marginX={3}
         >
-          <Titulo borda={0} fontSize={2.5} tamanhoTotal={60} fontePeso={"bold"}>
-            Zaratrusta
+          <Titulo border={0} fontSize={2.5} width={60} fontWeight={"bold"}>
+          Zaratrusta
           </Titulo>
+
           <Paragrafo
-            borda={0}
+            border={0}
             fontSize={1.1}
-            espacamento={1}
-            margemTopo={1}
-            tamanhoTotal={100}
+            wordSpacing={1}
+            marginTop={1}
           >
             Prepare-se para adentrar na "Mansão de Zaratrusta," uma experiência
             de terror medieval compacta e claustrofóbica. Neste emocionante
@@ -140,12 +159,13 @@ export default function Index() {
             controla os destinos dos aventureiros, desafiando-os a superar seus
             medos e segredos mais sombrios, ou enfrentar um destino aterrador...
           </Paragrafo>
+
           <Titulo
-            borda={0}
+            border={0}
             fontSize={1.3}
-            tamanhoTotal={60}
-            margemTopo={1.5}
-            fontePeso={"bold"}
+            width={60}
+            marginTop={1.5}
+            fontWeight={"bold"}
           >
             Em Breve (28/10)
           </Titulo>

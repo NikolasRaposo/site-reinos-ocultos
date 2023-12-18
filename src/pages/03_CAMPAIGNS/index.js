@@ -2,25 +2,30 @@ import fundo01 from "../../assets/img/Banner02.png";
 import fundo02 from "../../assets/img/Banner03.png";
 import fundoMobile01 from "../../assets/img/BannerMobile02.png";
 import fundoMobile02 from "../../assets/img/BannerMobile03.png";
+//STYLED COMPONENTS
 import {
-  Titulo,
-  Banner,
-  Paragrafo,
-  Divisão,
-  Seção,
   Container,
-  Espacamento,
+  Seção,
+  Titulo,
+  Paragrafo,
+  Banner,
+  Divisão
+} from "../styles";
+
+import {
+  Espacamento
 } from "./styles";
 
 export default function Index() {
   return (
-    <Container cor={"whiteRO"}>
+    <Container border={0} color={"whiteRO"}>
       <Espacamento border={0} height={2} height425={5} />
+
       <Seção
-        borda={0}
-        justificarConteudo={"center"}
+        border={0}
+        justifyContent={"center"}
       >
-        <Titulo borda={0} fontSize={1.5} cor={"whiteRO"} alinhamento425={"center"} margemTopo425={2}>
+        <Titulo border={0} fontSize={1.5} color={"whiteRO"} textAlign425={"center"} marginTop425={2} width425={72}>
           CAMPANHAS EM ANDAMENTO
         </Titulo>
       </Seção>
@@ -28,23 +33,25 @@ export default function Index() {
 
       <Banner borda={0} src={fundoMobile01} />
 
-      <Seção borda={0} imagem={fundo01}>
-        <Divisão
-          borda={0}
-          tamanhoTotal={43}
-          margemVertical={0}
-          margemHorizontal={3}
+
+      <Seção border={0} image={fundo01}>
+      <Divisão
+          border={0}
+          width={40}
+          width1200={60}
+          width768={75}
+          marginY={0}
+          marginX={3}
         >
-          <Titulo borda={0} fontSize={2.5} fontePeso={"bold"} >
+          <Titulo border={0} fontSize={2.5} fontWeight={"bold"} >
             Eberron - Relíquias <br /> do Passado
           </Titulo>
-          
+
           <Paragrafo
-            borda={0}
+            border={0}
             fontSize={1.5}
-            espacamento={1}
-            margemTopo={6}
-            tamanhoTotal={100}
+            wordSpacing={1}
+            marginTop={6}
           >
             Em "Eberron: Relíquias do Passado," nossos aventureiros são lançados
             em um continente mergulhado em uma atmosfera de ex-conflitos
@@ -56,12 +63,12 @@ export default function Index() {
             enfrentam as mais notórias facções criminosas, sendo desafiados a
             tomar decisões cruciais ao longo da trama.
           </Paragrafo>
+
           <Paragrafo
-            borda={0}
+            border={0}
             fontSize={1.5}
-            espacamento={1}
-            margemTopo={2}
-            tamanhoTotal={100}
+            wordSpacing={1}
+            marginTop={2}
             colorSpan={'redRO'}
           >
             <span>Sessões:</span> sexta às 23h00 e sábado às 15h00.
@@ -69,42 +76,43 @@ export default function Index() {
         </Divisão>
       </Seção>
 
-
+      
       <Espacamento border={0} height={4} height425={10} />
 
       <Banner borda={0} src={fundoMobile02} />
 
       <Seção
-        borda={0}
-        imagem={fundo02}
-        justificarConteudo={"end"}
+        border={0}
+        image={fundo02}
+        justifyContent={"end"}
       >
         <Divisão
-          borda={0}
-          tamanhoTotal={45}
-          margemVertical={1}
-          margemHorizontal={3}
-          disposicao={"flex"}
-          direcaoConteudo={"column"}
-          alinharConteudo={"end"}
+          border={0}
+          width={40}
+          width1200={60}
+          width768={75}
+          marginY={1}
+          marginX={3}
+          display={"flex"}
+          flexDirection={"column"}
+          alignItems={"end"}
         >
           <Titulo
-            borda={0}
+            border={0}
             fontSize={2}
-            tamanhoTotal={70}
-            fontePeso={"bold"}
-            alinhamento={"right"}
-            alinhamento425={"left"}
+            width={70}
+            fontWeight={"bold"}
+            textAlign={"right"}
+            textAlign425={"left"}
           >
             Namar - Entre Mundos
           </Titulo>
           <Paragrafo
-            borda={0}
+            border={0}
             fontSize={1.5}
-            espacamento={1}
-            margemTopo={4}
-            alinhamento={"right"}
-            tamanhoTotal={100}
+            wordSpacing={1}
+            marginTop={4}
+            textAlign={"right"}
           >
             "Namar: Entre Mundos" é o cenário principal atualmente desenvolvido
             por Reinos Ocultos, uma fusão de elementos de Fantasia Medieval e
@@ -119,12 +127,11 @@ export default function Index() {
             em uma luta para proteger o mundo da iminente destruição.
           </Paragrafo>
           <Paragrafo
-            borda={0}
+            border={0}
             fontSize={1.5}
-            espacamento={1}
-            margemTopo={2}
-            alinhamento={"right"}
-            tamanhoTotal={100}
+            wordSpacing={1}
+            marginTop={2}
+            textAlign={"right"}
             colorSpan={'redRO'}
           >
             <span>Sessões:</span> terça às 21h00.

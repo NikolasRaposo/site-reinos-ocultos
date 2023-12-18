@@ -15,24 +15,25 @@ import Nikolas from "../../assets/img/Jogadores/Nikola-site.png";
 import Pedro from "../../assets/img/Jogadores/Pedro-site.png";
 //STYLED COMPONENTS
 import {
-  DivisãoFlex,
-  TituloFlex,
-  TextoFlex,
-  SeçãoFlex,
-  GridFlex,
-  Seção,
   Container,
+  Seção,
+  Titulo,
+  Paragrafo
+} from "../styles";
+
+import {
+  DivisãoFlex,
+  GridFlex,
   Letreiro,
   LetreiroLink,
-  OnlyDesktop,
-  TextoLetreiro,
+  OnlyDesktop
 } from "./styles";
 
 export default function Index() {
   return (
-    <Container cor={"whiteRO"}>
+    <Container border={0} color={"whiteRO"}>
       {/*BANNER*/}
-      <Seção border={0} imagem={fundo}>
+      <Seção border={0} image={fundo}>
         <DivisãoFlex
           border={0}
           width={30}
@@ -40,18 +41,18 @@ export default function Index() {
           marginX={2.5}
           width425={80}
         >
-          <TituloFlex border={0} fontSize={2.12} fontWeight={"bold"}>
+          <Titulo border={0} fontSize={2.12} fontWeight={"bold"}>
             Descubra os segredos <br />
             dos reinos ocultos...
-          </TituloFlex>
+          </Titulo>
 
-          <TextoFlex border={0} fontSize={1.28} marginTop={4}>
+          <Paragrafo border={0} fontSize={1.28} marginTop={4}>
             somos um conglomerado de universos que se encontram em um gigantesco
             e completo cenário de Fantasia Medieval. Dentro de nossos mundos
             cheios de diversidades e uma pitada de caos, estamos construindo uma
             nova forma de contar histórias, com um cenário de autoria
             brasileira e influência de diversas obras literárias.
-          </TextoFlex>
+          </Paragrafo>
 
           <LinkButton
             margemTopo={10}
@@ -67,7 +68,7 @@ export default function Index() {
         </DivisãoFlex>
       </Seção>
       {/*ACCORDION*/}
-      <SeçãoFlex border={0} paddingY={5} paddingX={2.5} distanciaEntre={12}>
+      <Seção border={0} paddingY={5} paddingX={2.5} columnGap={12}>
         <DivisãoFlex border={0} width={100} >
           <AccordionRO />
         </DivisãoFlex>
@@ -79,7 +80,7 @@ export default function Index() {
             direcaoConteudo={"column"}
             alinharConteudo={"end"}
           >
-            <TituloFlex
+            <Titulo
               fontWeight={"bold"}
               border={0}
               fontSize={1.7}
@@ -89,12 +90,13 @@ export default function Index() {
             >
               O universo e histórias <br />
               de Reinos Ocultos
-            </TituloFlex>
-            <TextoFlex
+            </Titulo>
+
+            <Paragrafo
               border={0}
               fontSize={0.95}
               marginTop={2}
-              alinhamento={"right"}
+              textAlign={"right"}
               width={90}
             >
               Há éons passados, emergiu dos recantos misteriosos da história um
@@ -104,15 +106,15 @@ export default function Index() {
               determinação, desafiou todos os terrenos conhecidos para um
               conflito épico e tumultuado, que abalou os alicerces da existência
               e lançou os Reinos Ocultos pelo mundo.
-            </TextoFlex>
+            </Paragrafo>
           </DivisãoFlex>
         </OnlyDesktop>
-      </SeçãoFlex>
+      </Seção>
       {/*LETREIERO*/}
       <Seção
         border={0}
-        justificarConteudo={"center"}
-        alinharConteudo={"center"}
+        justifyContent={"center"}
+        alignItems={"center"}
         paddingTop={3}
       >
         <LetreiroLink border={0} width={85} href="/campanhas">
@@ -124,17 +126,17 @@ export default function Index() {
         border={0}
         paddingTop={2}
         paddingBottom={10}
-        justificarConteudo={"center"}
-        alinharConteudo={"center"}
-        direcaoConteudo={"column"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        flexDirection={"column"}
       >
         <DivisãoFlex border={0} marginY={0} marginX={20} marginY425={0} marginX425={10}>
-          <TituloFlex border={0} fontSize={1.53} textAlign={"center"}>
+          <Titulo border={0} fontSize={1.53} textAlign={"center"}>
             Conheça os "ocultinhos" de Reinos Ocultos, os bravos aventureiros de
             masmorras com dragões. Descubra as mentes criativas por trás de
             nossas aventuras e mergulhe nas histórias épicas que são
             criadas.
-          </TituloFlex>
+          </Titulo>
         </DivisãoFlex>
         <GridFlex
           border={0}
