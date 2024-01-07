@@ -9,7 +9,7 @@ import letreiro from "../../assets/img/Logo horizontal.svg";
 import Amanda from "../../assets/img/Jogadores/Amanda.png";
 import Camili from "../../assets/img/Jogadores/Camili-site.png";
 import Hugo from "../../assets/img/Jogadores/Hugo.png";
-import Marcio from "../../assets/img/Jogadores/Nelson-site.png";
+import Marcio from "../../assets/img/Jogadores/Marcio-site.png";
 import Joao from "../../assets/img/Jogadores/Derik-site.png";
 import Nikolas from "../../assets/img/Jogadores/Nikola-site.png";
 import Pedro from "../../assets/img/Jogadores/Pedro-site.png";
@@ -148,6 +148,7 @@ export default function Index() {
         >
           <PerfilRO
             img={Hugo}
+            widthImage={100}
             nome={"Hugo Cavali"}
             papel={"Mestre"}
             ColumnStart={2}
@@ -155,6 +156,7 @@ export default function Index() {
           />
           <PerfilRO
             img={Amanda}
+            widthImage={100}
             nome={"Amanda Christine"}
             papel={"Jogadora"}
             ColumnStart={1}
@@ -162,6 +164,7 @@ export default function Index() {
           />
           <PerfilRO
             img={Camili}
+            widthImage={100}
             nome={"Camili Pedroso"}
             papel={"Jogadora"}
             ColumnStart={2}
@@ -169,6 +172,7 @@ export default function Index() {
           />
           <PerfilRO
             img={Joao}
+            widthImage={100}
             nome={"João Coelho"}
             papel={"Jogador"}
             ColumnStart={3}
@@ -176,6 +180,7 @@ export default function Index() {
           />
           <PerfilRO
             img={Marcio}
+            widthImage={100}
             nome={"Marcio Clini"}
             papel={"Jogador"}
             ColumnStart={1}
@@ -183,6 +188,7 @@ export default function Index() {
           />
           <PerfilRO
             img={Nikolas}
+            widthImage={100}
             nome={"Nikolas Raposo"}
             papel={"Jogador"}
             ColumnStart={2}
@@ -190,6 +196,7 @@ export default function Index() {
           />
           <PerfilRO
             img={Pedro}
+            widthImage={100}
             nome={"Pedro Lopes"}
             papel={"Jogador"}
             ColumnStart={3}

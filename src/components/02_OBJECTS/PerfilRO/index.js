@@ -1,10 +1,10 @@
 import { Item, Perfil, PerfilTexto } from "./styles";
 
-export default function PerfilRO({ img, nome, papel, ColumnStart, ColumnEnd }) {
+export default function PerfilRO({ border, img, widthImage, nome, papel, fontSize, ColumnStart, ColumnEnd }) {
   return (
     <>
     <Item
-      borda={0}
+      borda={border}
       gridColumnStart={ColumnStart}
       gridColumnEnd={ColumnEnd}
       textAlign={"center"}
@@ -12,9 +12,9 @@ export default function PerfilRO({ img, nome, papel, ColumnStart, ColumnEnd }) {
       flexDirection={"column"}
       alignItems={"center"}
     >
-      <Perfil borda={0} src={img} width={100} />
+      <Perfil borda={0} src={img} width={widthImage} />
 
-      <PerfilTexto borda={0} fontSize={0.85} fontePeso={"bold"} width={100}>
+      <PerfilTexto borda={0} fontSize={fontSize} fontePeso={"bold"} width={100}>
         <span> {nome} </span>
         <br />
         {papel}

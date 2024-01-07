@@ -14,6 +14,7 @@ export const Seção = styled.section`
     background-image: ${(props) => `url(${props.image})`};
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: ${(props) => `${props.backgroundPositionX}`};
 
     display: flex;
     flex-wrap: ${(props) => `${props.flexWrap}`};
@@ -31,6 +32,12 @@ export const Seção = styled.section`
     padding-top: ${(props) => `${props.paddingTop}%`};
     padding-bottom: ${(props) => `${props.paddingBottom}%`};
 
+    @media screen and (max-width: 1200px) {
+        background-position-x: ${(props) => `${props.backgroundPositionX1200}`};
+    }
+    @media screen and (max-width: 768px) {
+        background-position-x: ${(props) => `${props.backgroundPositionX768}`};
+    }
     @media screen and (max-width: 425px) {
         background-image: none;
     }
@@ -48,6 +55,7 @@ export const Titulo = styled.h1`
     width: ${(props) => `${props.width}%`};
 
     margin-top: ${(props) => `${props.marginTop}%`};
+    margin-bottom: ${(props) => `${props.marginBottom}%`};
     padding-right: ${(props) => `${props.paddingRight}%`};
 
     @media screen and (max-width: 1200px) {
@@ -76,6 +84,7 @@ export const Paragrafo = styled.p`
     word-spacing: ${(props) => `${props.wordSpacing}px`};
 
     margin-top: ${(props) => `${props.marginTop}%`};
+    margin-bottom: ${(props) => `${props.marginBottom}%`};
 
     span {
         font-weight: bold;
@@ -136,4 +145,20 @@ export const Divisão = styled.div`
         margin-top: ${(props) => `${props.margemTop425}%`};
         margin: ${(props) => `${props.margemVertical*0.3}em`} ${(props) => `${props.margemHorizontal*0.3}em`};
     }
+`;
+
+export const Grid = styled.div`
+  border: ${(props) => `${props.border}px`} solid red;
+  width: ${(props) => `${props.width}%`};
+  margin-top: ${(props) => `${props.margemTopo}%`};
+  display: grid;
+  justify-content: ${(props) => `${props.justifyContent}`};
+  flex-direction: ${(props) => `${props.flexDirection}`};
+  align-items: ${(props) => `${props.alignItems}`};
+  row-gap: ${(props) => `${props.rowGap}%`};
+  column-gap: ${(props) => `${props.columnGap}%`};
+
+  @media screen and (max-width: 425px) {
+    width: ${(props) => `${props.width425}%`};
+  }
 `;
